@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- LAYOUT LABEL TITULO DA TELA -->
+    <LinearLayout
+        android:id="@+id/linear_layout_label_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+
+        <!-- LABEL TITULO DA TELA -->
+        <TextView
+            android:id="@+id/label_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/label_titulo"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:textSize="50sp"/>
+    </LinearLayout>
+
+    <!-- LAYOUT PESO -->
+    <LinearLayout
+        android:id="@+id/linear_layout_peso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_layout_label_titulo"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="horizontal">
+
+        <!-- LABEL PESO -->
+        <TextView
+            android:id="@+id/label_peso"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/label_peso"
+            android:textAlignment="gravity"
+            android:textStyle="bold"
+            android:textSize="30sp"/>
+
+        <!-- FIELD PESO -->
+        <EditText
+            android:id="@+id/field_peso"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="21dp"
+            android:gravity="center"
+            android:inputType="number"
+            android:hint="@string/hint_peso"
+            android:text="@string/field_peso"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            android:textAlignment="center"
+            android:maxLength="6"/>
+    </LinearLayout>
+
+    <!-- LAYOUT ALTURA -->
+    <LinearLayout
+        android:id="@+id/linear_layout_altura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_layout_peso"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="horizontal">
+
+        <!-- Label Altura -->
+        <TextView
+            android:id="@+id/label_altura"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/label_altura"
+            android:textAlignment="gravity"
+            android:textStyle="bold"
+            android:textSize="30sp"/>
+
+        <!-- FIELD ALTURA -->
+        <EditText
+            android:id="@+id/field_altura"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:inputType="number"
+            android:hint="@string/hint_altura"
+            android:text="@string/field_altura"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            android:textAlignment="center"
+            android:maxLength="4"/>
+    </LinearLayout>
+
+    <!-- BUTTON CALCULAR -->
+    <Button
+        android:id="@+id/button_calcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_layout_altura"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:height="140dp"
+        android:width="280dp"
+        android:text="@string/text_button_calcular"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:textAllCaps="false"/>
+
+    <!-- LAYOUT LABEL RESULTADO -->
+    <LinearLayout
+        android:id="@+id/linear_layout_label_resultado"
+        android:layout_below="@id/button_calcular"
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+
+        <!-- LABEL RESULTADO -->
+        <TextView
+            android:gravity="start"
+            android:id="@+id/label_resultado"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/label_resultado"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</RelativeLayout>
