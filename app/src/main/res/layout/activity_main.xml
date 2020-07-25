@@ -1,16 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- LAYOUT AUTOR DO APP -->
+    <LinearLayout
+        android:id="@+id/linear_layout_autor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <!-- LABEL AUTOR -->
+        <TextView
+            android:id="@+id/label_autor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/label_autor"
+            android:textAlignment="center"
+            android:textColor="@color/colorGold"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
     <!-- LAYOUT LABEL TITULO DA TELA -->
     <LinearLayout
         android:id="@+id/linear_layout_label_titulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/linear_layout_autor"
         android:layout_marginTop="50dp"
         android:orientation="horizontal">
 
@@ -54,6 +77,7 @@
             android:layout_width="300dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="21dp"
+            android:digits="0123456789,"
             android:gravity="center"
             android:inputType="number"
             android:hint="@string/hint_peso"
@@ -91,8 +115,9 @@
             android:layout_width="300dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
+            android:digits="0123456789,"
             android:gravity="center"
-            android:inputType="number"
+            android:inputType="numberSigned"
             android:hint="@string/hint_altura"
             android:text="@string/field_altura"
             android:textSize="30sp"
@@ -108,10 +133,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/linear_layout_altura"
         android:layout_centerInParent="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:gravity="center"
-        android:height="130dp"
-        android:width="260dp"
+        android:height="120dp"
+        android:width="250dp"
         android:text="@string/text_button_calcular"
         android:textAlignment="center"
         android:textStyle="bold"
@@ -122,21 +147,24 @@
     <LinearLayout
         android:id="@+id/linear_layout_label_resultado"
         android:layout_below="@id/button_calcular"
-        android:layout_height="200dp"
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginHorizontal="10dp"
         android:orientation="horizontal">
 
         <!-- LABEL RESULTADO -->
         <TextView
-            android:gravity="start"
             android:id="@+id/label_resultado"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginHorizontal="10dp"
             android:text="@string/label_resultado"
-            android:textAlignment="textStart"
+            android:justificationMode="inter_word"
             android:textColor="@color/colorWhite"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold"/>
     </LinearLayout>
 
